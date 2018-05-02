@@ -1,0 +1,23 @@
+.section-title {
+    display: inline-block;
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.5;
+    position: relative;
+    &_dark {
+        color: #000;
+    }
+    &_green {
+        color: #1ebea5;
+    }
+    &::before {
+        content: '';
+        width: 110%;
+        height: 3px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        background-color: rgba(30, 190, 165, 0.25);
+    }
+}
