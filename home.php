@@ -3,25 +3,7 @@
 <html>
 <?php get_header(); ?>
 <body>
-	<header class="main-header" data-uk-sticky>
-		<div class="uk-container">
-			<div class="main-header__cols">
-				<div class="main-header__leftside">
-					<img class="main-header__logo" src="<?php echo get_template_directory_uri(); ?>/dist/img/logo.svg" alt="">
-				</div>
-				<div class="main-header__rightside">
-					<nav class="main-header__nav">
-						<ul>
-							<li><a class="decor-link" href="#">Главная</a></li>
-							<li><a class="decor-link" href="#">Работы</a></li>
-							<li><a class="decor-link" href="#">Статьи</a></li>
-							<li><a class="decor-link" href="#">Контакты</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+	<?php get_template_part('_header'); ?>
 	<main class="home">
 		<div class="home__intro">
 			<div class="uk-container">
@@ -220,20 +202,6 @@
 			</div>
 		</section>
 	</main>
-	<footer class="main-footer">
-		<div class="uk-container">
-			<div class="main-footer__content">
-				<div class="main-footer__leftside">
-					<div class="main-footer__owner">
-						© 2018 Remz — frontend developer Remzov Nikita
-					</div>
-				</div>
-				<div class="main-footer__rightside">
-					<a class="main-footer__sitemap decor-link" href="#">Карта сайта</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/dist/bundle.js"></script>
-	</body>
+<?php get_template_part('_footer'); ?>
+</body>
 </html>

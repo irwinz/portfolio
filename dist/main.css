@@ -12516,11 +12516,12 @@ iframe.uk-cover {
   padding: 10px 30px;
   background-color: transparent;
   border: 2px solid #333;
-  border-radius: 5px;
+  border-radius: 25px;
   color: #333;
   font-size: 18px;
   transition: background-color 0.25s;
   position: relative;
+  overflow: hidden;
 }
 .home__studio-link:hover {
   color: #333;
