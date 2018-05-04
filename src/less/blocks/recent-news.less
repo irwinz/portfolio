@@ -1,26 +1,28 @@
 .recent-news {
-    display: grid;
-    grid-template-columns: minmax(auto, 150px) auto;
-    grid-gap: 20px;
+    display: flex;
     align-items: flex-start;
     margin-bottom: 25px;
     padding: 30px 0;
 }
 
-.recent-news__desc {
-    order: 2;
+.recent-news__image {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    margin-right: 20px;
 }
 
 .recent-news__title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .recent-news__time {
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 5px 10px;
     border-radius: 10px;
     background-color: rgba(43, 143, 216, 0.1);
+    font-size: 12px;
 }
 
 .recent-news__text {

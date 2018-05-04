@@ -66,6 +66,27 @@
 .home__about {
     padding: 60px 0 160px;
     position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -5vw;
+        border: 5vw solid transparent;
+        border-top: 0px solid #fff;
+        border-right: 50vw solid #fff;
+        z-index: 2;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0vw;
+        border: 5vw solid transparent;
+        border-top: 0px solid rgba(43, 143, 216, 0.1);
+        border-right: 50vw solid rgba(43, 143, 216, 0.1);
+        z-index: 2;
+        transform: rotate(180deg);
+    }
 }
 
 .home__about-cols {
@@ -110,12 +131,6 @@
     }
 }
 
-.home__recent-projects-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(300px, auto);
-    grid-gap: 25px;
-}
 
 .home__recent-articles {
     padding: 60px 0 120px;
@@ -157,15 +172,42 @@
 .home__studio-link {
     display: inline-block;
     padding: 10px 30px;
-    background-color: @color-alt;
-    border-radius: 25px;
-    color: #fff;
+    background-color: transparent;
+    border: 2px solid @color-dark;
+    border-radius: 5px;
+    color: @color-dark;
     font-size: 18px;
     transition: background-color 0.25s;
+    position: relative;
     &:hover {
-        background-color: darken(@color-alt, 10%);
-        color: #fff;
+        color: @color-dark;
         text-decoration: none;
-        transition: background-color 0.25s;
+        &::before {
+            width: 100%;
+            transition: width 0.25s;
+        }
+    }
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    &::before {
+        content: '';
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: @color-alt;
+        transition: width 0.25s;
+    }
+}
+
+.home__studio-link-icon {
+    svg {
+        width: 25px;
+        height: 25px;
+        fill: @color-dark !important;
+        color: @color-dark !important;
     }
 }

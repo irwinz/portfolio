@@ -298,7 +298,7 @@ eval("throw new Error(\"Module parse failed: Unexpected character '@' (2:0)\\nYo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./about-photo.jpg\": \"./src/img/about-photo.jpg\",\n\t\"./intro-bg.jpg\": \"./src/img/intro-bg.jpg\",\n\t\"./logo.svg\": \"./src/img/logo.svg\",\n\t\"./logo.svg~\": \"./src/img/logo.svg~\",\n\t\"./project-1.jpg\": \"./src/img/project-1.jpg\",\n\t\"./project-2.jpg\": \"./src/img/project-2.jpg\",\n\t\"./project-3.jpg\": \"./src/img/project-3.jpg\",\n\t\"./project-4.jpg\": \"./src/img/project-4.jpg\",\n\t\"./selector-icon.svg~\": \"./src/img/selector-icon.svg~\",\n\t\"./uikit.jpg\": \"./src/img/uikit.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\tvar module = __webpack_require__(id);\n\treturn module;\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error('Cannot find module \"' + req + '\".');\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/img sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack:///./src/img_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./about-photo.jpg\": \"./src/img/about-photo.jpg\",\n\t\"./avocode.jpg\": \"./src/img/avocode.jpg\",\n\t\"./intro-bg.jpg\": \"./src/img/intro-bg.jpg\",\n\t\"./logo.svg\": \"./src/img/logo.svg\",\n\t\"./logo.svg~\": \"./src/img/logo.svg~\",\n\t\"./project-1.jpg\": \"./src/img/project-1.jpg\",\n\t\"./project-2.jpg\": \"./src/img/project-2.jpg\",\n\t\"./project-3.jpg\": \"./src/img/project-3.jpg\",\n\t\"./project-4.jpg\": \"./src/img/project-4.jpg\",\n\t\"./selector-icon.svg~\": \"./src/img/selector-icon.svg~\",\n\t\"./uikit.jpg\": \"./src/img/uikit.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\tvar module = __webpack_require__(id);\n\treturn module;\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error('Cannot find module \"' + req + '\".');\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/img sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack:///./src/img_sync_^\\.\\/.*$?");
 
 /***/ }),
 
@@ -310,6 +310,17 @@ eval("var map = {\n\t\"./about-photo.jpg\": \"./src/img/about-photo.jpg\",\n\t\"
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"img/about-photo.jpg?1ece63c679d467a0d471ef9e1fcb2f6d\";\n\n//# sourceURL=webpack:///./src/img/about-photo.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/avocode.jpg":
+/*!*****************************!*\
+  !*** ./src/img/avocode.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/avocode.jpg?053fa70395316bc6f4e2cafcaefe7060\";\n\n//# sourceURL=webpack:///./src/img/avocode.jpg?");
 
 /***/ }),
 
@@ -331,7 +342,7 @@ eval("module.exports = __webpack_require__.p + \"img/intro-bg.jpg?7c0fe7a4bd6050
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"img/logo.svg?ea3298cfe1c1f65517dac6b61610b10d\";\n\n//# sourceURL=webpack:///./src/img/logo.svg?");
+eval("module.exports = __webpack_require__.p + \"img/logo.svg?65f7a41be1ece9c109597971b3189e54\";\n\n//# sourceURL=webpack:///./src/img/logo.svg?");
 
 /***/ }),
 

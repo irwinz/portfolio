@@ -12,12 +12,12 @@
         height: 8px;
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 25px;
         border-right: 2px solid #fff;
         border-bottom: 2px solid #fff;
-        transform: rotate(-45deg) translate(0, -50%);
+        transform: translate(0, -50%) rotate(-45deg);
         transform-origin: center;
-        transition: transform 0.25s;
+        transition: transform 0.2s;
     }
     &:hover {
         background-color: darken(@color-alt, 10%);
@@ -25,9 +25,9 @@
         color: #fff;
         transition: background-color 0.25s;
         &::before {
-            transform: rotate(-45deg) translate(10px, -50%);
+            transform: translate(10px, -50%) rotate(-45deg);
             transform-origin: center;
-            transition: transform 0.25s;
+            transition: transform 0.2s;
         }
     }
 }
