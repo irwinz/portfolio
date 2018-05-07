@@ -7,7 +7,7 @@
 	<main class="home">
 		<div class="home__intro">
 			<div class="home__intro-content">
-				<h1 class="home__intro-title">Портфолио Remzov, bitch!</h1>
+				<h1 class="home__intro-title"><?php echo get_bloginfo('name'); ?></h1>
 			</div>
 			<a class="home__intro-button" href="#about" uk-scroll="offset: 80">
 				<span class="home__intro-button-icon uk-preserve" uk-icon="icon: arrow-down"></span>
@@ -17,18 +17,16 @@
 			<div class="uk-container">
 				<h2 class="section-title section-title_dark">О себе</h2>
 				<div class="home__about-cols">
-					<div class="home__photo">
-						<img src="<?php echo get_template_directory_uri(); ?>/dist/img/about-photo.jpg" alt="">
+					<div class="home__about-photo">
+						<img src="<?php the_field('home_about-photo'); ?>" alt="">
 					</div>
 					<div class="home__about-text">
-						<p>Всем привет!</p>
-						<p>Меня зовут Никита. Я Front-end developer. С тех пор как впервые увидел на экране "Hello world!", понял, что это то, чему хочу посвятить всего себя!</p>
-						<p>С тех пор утекло немало строчек кода. Сейчас я работаю в команде. Мы создаем все от Landing page до eCommerce проектов.</p>
+						<?php the_field('home_about-text'); ?>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="home__project-items">
+		<section class="home__recent-projects">
 			<div class="uk-container">
 				<h2 class="section-title section-title_green">Последние работы</h2>
 				<div class="landing__partners-slider uk-visible-toggle" data-uk-slider>
@@ -140,49 +138,42 @@
 				<a class="view-all" href="#"><span>Посмотреть все</span></a>
 			</div>
 		</section>
-		<section class="home__recent-articles">
+		<section class="home__recent-news">
 			<div class="uk-container">
 				<h2 class="section-title">Свежие статьи</h2>
-				<div class="home__recent-articles-grid">
-						<article class="recent-news">
-							<div class="recent-news__image uk-cover-container">
-								<img src="<?php echo get_template_directory_uri(); ?>/dist/img/uikit.jpg" alt="" data-uk-cover>
+				<div class="home__recent-news-grid">
+					<?php
+					$args = array(
+						'category' => 'Статьи',
+						'numberposts' => 2,
+					);
+					$news = get_posts($args);
+					foreach ($news as $post): ?>
+					<div>
+						<div class="news-item">
+							<div class="news-item__image uk-cover-container">
+								<img src="<?php the_field('article_image') ?>" alt="" data-uk-cover>
+								<a class="news-item__image-link" href="<?php the_permalink(); ?>"></a>
 							</div>
-							<div class="recent-news__desc">
-								<header class="recent-news__heading">
+							<div class="news-item__desc">
+								<header class="news-item__heading">
 									<div>
-										<h3 class="recent-news__title">Заголовок статьи №1</h3>
+										<a class="news-item__title-link" href="<?php the_permalink(); ?>">
+											<h3 class="news-item__title"><?php the_title(); ?></h3>
+										</a>
 									</div>
 									<div>
-										<time class="recent-news__time" datetime="2018-09-23">2018-09-23</time>
-									</div>
-								</header>
-								<div class="recent-news__text">
-									Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для...
-								</div>
-								<a class="link-more" href="#">Читать</a>
-							</div>
-						</article>
-						<article class="recent-news">
-							<div class="recent-news__image uk-cover-container">
-								<img src="<?php echo get_template_directory_uri(); ?>/dist/img/avocode.jpg" alt="" data-uk-cover>
-							</div>
-							<div class="recent-news__desc">
-								<header class="recent-news__heading">
-									<div>
-										<h3 class="recent-news__title">Заголовок статьи №1</h3>
-									</div>
-									<div>
-										<time class="recent-news__time" datetime="2018-09-23">2018-09-23</time>
+										<time class="news-item__time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
 									</div>
 								</header>
-								<div class="recent-news__text">
-									Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для...
+								<div class="news-item__text">
+									<?php the_field('article_intro'); ?>
 								</div>
-								<a class="link-more" href="#">Читать</a>
+								<a class="link-more" href="<?php the_permalink(); ?>">Читать</a>
 							</div>
-						</article>
+						</div>
 					</div>
+				<?php endforeach; wp_reset_postdata();?>
 				</div>
 				<a class="view-all" href="#"><span>Посмотреть все</span></a>
 			</div>
@@ -194,7 +185,7 @@
 						Хотите разработать сайт с нуля под ключ? Вы можете заказать всю работу веб-студии "ДоменАРТ"!
 					</div>
 					<div>
-						<a class="home__studio-link" href="#"><span>Перейти <span class="home__studio-link-icon uk-preserve" uk-icon="icon: arrow-right"></span></span></a>
+						<a class="link-out" href="#"><span>Перейти <span class="link-out__icon uk-preserve" uk-icon="icon: arrow-right"></span></span></a>
 					</div>
 				</div>
 			</div>

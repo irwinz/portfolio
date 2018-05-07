@@ -5,4 +5,27 @@
 @base-body-font-weight: 300;
 @form-height: 50px;
 @form-focus-border: @color-dark;
-@modal-md: 780px;
+
+.uk-modal-dialog {
+    .hook-modal-dialog;
+}
+
+.hook-modal-dialog() {
+    width: 800px;
+}
+
+.modal-cover-misc() {
+    .uk-slideshow-items {
+        height: 500px !important;
+    }
+    .uk-cover {
+        top: 0;
+        transform: translate(-50%, 0);
+    }
+    .uk-slidenav {
+        color: #000;
+        &:hover {
+            color: #000;
+        }
+    }
+}

@@ -7,7 +7,7 @@
     <main class="contacts">
         <div class="contacts__page-intro page-intro">
             <div class="page-intro__content">
-                <h1 class="page-intro__title">Контакты</h1>
+                <h1 class="page-intro__title"><?php the_title(); ?></h1>
             </div>
         </div>
         <div class="contacts__content">

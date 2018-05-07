@@ -4958,6 +4958,7 @@ ul.uk-nav-sub {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
+  width: 800px;
 }
 /*
  * Open
@@ -12305,6 +12306,9 @@ iframe.uk-cover {
     page-break-after: avoid;
   }
 }
+.uk-modal-dialog {
+  width: 800px;
+}
 @font-face {
   font-family: 'OpenSans';
   src: local('OpenSans'), url(fonts/OpenSans-Light.woff?684c4fb87e4351abe8c8d6b02b1ceb25) format('woff');
@@ -12444,7 +12448,7 @@ iframe.uk-cover {
 .home__about-cols {
   display: flex;
 }
-.home__photo {
+.home__about-photo {
   min-width: 450px;
   margin-right: 100px;
 }
@@ -12480,16 +12484,16 @@ iframe.uk-cover {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.home__recent-articles {
+.home__recent-news {
   padding: 60px 0 120px;
 }
-.home__recent-articles-grid {
+.home__recent-news-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 100px;
   position: relative;
 }
-.home__recent-articles-grid::before {
+.home__recent-news-grid::before {
   content: '';
   width: 1px;
   height: 100%;
@@ -12513,52 +12517,8 @@ iframe.uk-cover {
   padding: 60px 0;
   font-size: 18px;
 }
-.home__studio-link {
-  display: inline-block;
-  padding: 10px 30px;
-  background-color: transparent;
-  border: 2px solid #333;
-  border-radius: 5px;
-  color: #333;
-  font-size: 18px;
-  transition: background-color 0.25s;
-  position: relative;
-  overflow: hidden;
-}
-.home__studio-link:hover {
-  color: #fff;
-  text-decoration: none;
-}
-.home__studio-link:hover::before {
-  width: 100%;
-  transition: width 0.25s;
-}
-.home__studio-link:hover .home__studio-link-icon svg {
-  fill: #fff !important;
-  color: #fff !important;
-}
-.home__studio-link span {
-  position: relative;
-  z-index: 2;
-}
-.home__studio-link::before {
-  content: '';
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #333;
-  transition: width 0.25s;
-}
-.home__studio-link-icon svg {
-  width: 25px;
-  height: 25px;
-  fill: #333 !important;
-  color: #333 !important;
-}
 .projects__page-intro {
-  background: url(img/projects.jpg?f94a5b14ead1532fbe8f036d1e68e273) 50% 150% no-repeat;
+  background: url(img/projects.jpg?4f28777c6905b0562dc2638eaf0c96f5) 50% 150% no-repeat;
 }
 .projects__grid {
   display: grid;
@@ -12584,15 +12544,9 @@ iframe.uk-cover {
   font-size: 18px;
   cursor: pointer;
 }
-.projects__filter-item:hover {
-  background: rgba(43, 143, 216, 0.1);
-}
-.projects__filter-item_active {
+.projects__filter-item_isActive {
   background: #333;
   color: #fff;
-}
-.projects__filter-item_active:hover {
-  background: #333;
 }
 .contacts__content {
   padding: 100px 0 150px;
@@ -12604,7 +12558,7 @@ iframe.uk-cover {
   justify-content: space-around;
 }
 .contacts__page-intro {
-  background: url(img/contacts.jpg?ff71893eb5f05d54a2bc0b729b2d7661) 50% 110% no-repeat;
+  background: url(img/contacts.jpg?4a9836b50f9c0b68bdda5ab4666ccc3e) 50% 110% no-repeat;
 }
 .contacts__info-row {
   margin-bottom: 20px;
@@ -12616,6 +12570,13 @@ iframe.uk-cover {
 }
 .contacts__info {
   font-size: 22px;
+}
+.articles__page-intro {
+  background: url(img/articles.jpg?a793892ca56090ef989916626d23d57a) 50% 50% no-repeat;
+  background-size: cover;
+}
+.articles__content {
+  padding: 100px 0 150px;
 }
 .main-header {
   background-color: #333;
@@ -12749,6 +12710,8 @@ iframe.uk-cover {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  font-size: 18px;
+  cursor: pointer;
 }
 .view-all:hover {
   color: #333;
@@ -12775,22 +12738,22 @@ iframe.uk-cover {
   background-color: #333;
   transition: height 0.25s;
 }
-.recent-news {
+.news-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 25px;
   padding: 30px 0;
 }
-.recent-news__image {
+.news-item__image {
   width: 150px;
   min-width: 150px;
   height: 150px;
   margin-right: 20px;
 }
-.recent-news__title {
+.news-items__title {
   margin-bottom: 10px;
 }
-.recent-news__time {
+.news-item__time {
   display: inline-block;
   margin-bottom: 10px;
   padding: 5px 10px;
@@ -12798,14 +12761,26 @@ iframe.uk-cover {
   background-color: rgba(43, 143, 216, 0.1);
   font-size: 12px;
 }
-.recent-news__text {
+.news-item__text {
   margin-bottom: 30px;
   font-weight: 100;
 }
-.recent-news__image {
+.news-item__image {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.news-item__image-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.news-item__title-link:hover {
+  -webkit-text-decoration-color: #333;
+          text-decoration-color: #333;
 }
 .link-more {
   display: inline-block;
@@ -12816,6 +12791,8 @@ iframe.uk-cover {
   color: #fff;
   transition: background-color 0.25s;
   position: relative;
+  font-size: 16px;
+  cursor: pointer;
 }
 .link-more::before {
   content: '';
@@ -12935,8 +12912,88 @@ iframe.uk-cover {
   font-weight: 600;
   color: #333;
 }
+.project-modal .uk-slideshow-items {
+  height: 500px !important;
+}
+.project-modal .uk-cover {
+  top: 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.project-modal .uk-slidenav {
+  color: #000;
+}
+.project-modal .uk-slidenav:hover {
+  color: #000;
+}
 .project-modal__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+}
+.project-modal__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  font-weight: bold;
+}
+.project-modal__desc {
+  margin-bottom: 40px;
+}
+.link-out {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #333;
+  font-size: 18px;
+  transition: background-color 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.link-out:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.link-out:hover::before {
+  width: 100%;
+  transition: width 0.25s;
+}
+.link-out:hover .link-out__icon svg {
+  fill: #fff !important;
+  color: #fff !important;
+}
+.link-out span {
+  position: relative;
+  z-index: 2;
+}
+.link-out::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.25s;
+}
+.link-out__icon svg {
+  width: 25px;
+  height: 25px;
+  fill: #333 !important;
+  color: #333 !important;
+}
+.article {
+  padding: 100px 0 150px;
+}
+.article__title {
+  margin-bottom: 25px;
+}
+.article__time {
+  display: block;
+  margin-bottom: 25px;
+}
+.article__image {
+  margin-bottom: 40px;
 }
