@@ -6,10 +6,8 @@
 	<?php get_template_part('_header'); ?>
 	<main class="home">
 		<div class="home__intro">
-			<div class="uk-container">
-				<div class="home__content">
-					<h1 class="home__intro-title">Портфолио Remzov, bitch!</h1>
-				</div>
+			<div class="home__intro-content">
+				<h1 class="home__intro-title">Портфолио Remzov, bitch!</h1>
 			</div>
 			<a class="home__intro-button" href="#about" uk-scroll="offset: 80">
 				<span class="home__intro-button-icon uk-preserve" uk-icon="icon: arrow-down"></span>
@@ -30,7 +28,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="home__recent-projects">
+		<section class="home__project-items">
 			<div class="uk-container">
 				<h2 class="section-title section-title_green">Последние работы</h2>
 				<div class="landing__partners-slider uk-visible-toggle" data-uk-slider>
@@ -38,15 +36,15 @@
 						<div class="uk-slider-container">
 						    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
 								<li>
-									<div class="recent-project">
-										<div class="recent-project__image uk-cover-container">
+									<div class="project-item">
+										<div class="project-item__image uk-cover-container">
 											<img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
 										</div>
-										<div class="recent-project__desc">
-											<div class="recent-project__title">
+										<div class="project-item__desc">
+											<div class="project-item__title">
 												Проект №4
 											</div>
-											<div class="recent-project__text">
+											<div class="project-item__text">
 												Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
 											</div>
 											<a class="link-more" href="#">Перейти</a>
@@ -54,15 +52,15 @@
 									</div>
 						        </li>
 						        <li>
-									<div class="recent-project">
-										<div class="recent-project__image uk-cover-container">
+									<div class="project-item">
+										<div class="project-item__image uk-cover-container">
 											<img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-2.jpg" alt="" data-uk-cover>
 										</div>
-										<div class="recent-project__desc">
-											<div class="recent-project__title">
+										<div class="project-item__desc">
+											<div class="project-item__title">
 												Проект №4
 											</div>
-											<div class="recent-project__text">
+											<div class="project-item__text">
 												Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
 											</div>
 											<a class="link-more" href="#">Перейти</a>
@@ -70,15 +68,15 @@
 									</div>
 						        </li>
 						        <li>
-									<div class="recent-project">
-										<div class="recent-project__image uk-cover-container">
+									<div class="project-item">
+										<div class="project-item__image uk-cover-container">
 											<img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-3.jpg" alt="" data-uk-cover>
 										</div>
-										<div class="recent-project__desc">
-											<div class="recent-project__title">
+										<div class="project-item__desc">
+											<div class="project-item__title">
 												Проект №4
 											</div>
-											<div class="recent-project__text">
+											<div class="project-item__text">
 												Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
 											</div>
 											<a class="link-more" href="#">Перейти</a>
@@ -86,15 +84,15 @@
 									</div>
 						        </li>
 						        <li>
-									<div class="recent-project">
-										<div class="recent-project__image uk-cover-container">
+									<div class="project-item">
+										<div class="project-item__image uk-cover-container">
 											<img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-4.jpg" alt="" data-uk-cover>
 										</div>
-										<div class="recent-project__desc">
-											<div class="recent-project__title">
+										<div class="project-item__desc">
+											<div class="project-item__title">
 												Проект №4
 											</div>
-											<div class="recent-project__text">
+											<div class="project-item__text">
 												Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
 											</div>
 											<a class="link-more" href="#">Перейти</a>
@@ -102,15 +100,15 @@
 									</div>
 						        </li>
 								<li>
-									<div class="recent-project">
-										<div class="recent-project__image uk-cover-container">
+									<div class="project-item">
+										<div class="project-item__image uk-cover-container">
 											<img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
 										</div>
-										<div class="recent-project__desc">
-											<div class="recent-project__title">
+										<div class="project-item__desc">
+											<div class="project-item__title">
 												Проект №4
 											</div>
-											<div class="recent-project__text">
+											<div class="project-item__text">
 												Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
 											</div>
 											<a class="link-more" href="#">Перейти</a>
@@ -118,15 +116,15 @@
 									</div>
 								</li>
 								<li>
-									<div class="recent-project">
-										<div class="recent-project__image uk-cover-container">
+									<div class="project-item">
+										<div class="project-item__image uk-cover-container">
 											<img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-2.jpg" alt="" data-uk-cover>
 										</div>
-										<div class="recent-project__desc">
-											<div class="recent-project__title">
+										<div class="project-item__desc">
+											<div class="project-item__title">
 												Проект №4
 											</div>
-											<div class="recent-project__text">
+											<div class="project-item__text">
 												Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
 											</div>
 											<a class="link-more" href="#">Перейти</a>

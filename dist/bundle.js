@@ -298,7 +298,7 @@ eval("throw new Error(\"Module parse failed: Unexpected character '@' (2:0)\\nYo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./about-photo.jpg\": \"./src/img/about-photo.jpg\",\n\t\"./avocode.jpg\": \"./src/img/avocode.jpg\",\n\t\"./intro-bg.jpg\": \"./src/img/intro-bg.jpg\",\n\t\"./logo.svg\": \"./src/img/logo.svg\",\n\t\"./logo.svg~\": \"./src/img/logo.svg~\",\n\t\"./project-1.jpg\": \"./src/img/project-1.jpg\",\n\t\"./project-2.jpg\": \"./src/img/project-2.jpg\",\n\t\"./project-3.jpg\": \"./src/img/project-3.jpg\",\n\t\"./project-4.jpg\": \"./src/img/project-4.jpg\",\n\t\"./selector-icon.svg~\": \"./src/img/selector-icon.svg~\",\n\t\"./uikit.jpg\": \"./src/img/uikit.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\tvar module = __webpack_require__(id);\n\treturn module;\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error('Cannot find module \"' + req + '\".');\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/img sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack:///./src/img_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./about-photo.jpg\": \"./src/img/about-photo.jpg\",\n\t\"./avocode.jpg\": \"./src/img/avocode.jpg\",\n\t\"./contacts.jpg\": \"./src/img/contacts.jpg\",\n\t\"./github-icon.svg\": \"./src/img/github-icon.svg\",\n\t\"./intro-bg.jpg\": \"./src/img/intro-bg.jpg\",\n\t\"./logo.svg\": \"./src/img/logo.svg\",\n\t\"./logo.svg~\": \"./src/img/logo.svg~\",\n\t\"./mail-icon.svg\": \"./src/img/mail-icon.svg\",\n\t\"./map-icon.svg\": \"./src/img/map-icon.svg\",\n\t\"./phone-icon.svg\": \"./src/img/phone-icon.svg\",\n\t\"./project-1.jpg\": \"./src/img/project-1.jpg\",\n\t\"./project-2.jpg\": \"./src/img/project-2.jpg\",\n\t\"./project-3.jpg\": \"./src/img/project-3.jpg\",\n\t\"./project-4.jpg\": \"./src/img/project-4.jpg\",\n\t\"./project-image.jpg\": \"./src/img/project-image.jpg\",\n\t\"./projects.jpg\": \"./src/img/projects.jpg\",\n\t\"./selector-icon.svg~\": \"./src/img/selector-icon.svg~\",\n\t\"./skype-icon.svg\": \"./src/img/skype-icon.svg\",\n\t\"./uikit.jpg\": \"./src/img/uikit.jpg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\tvar module = __webpack_require__(id);\n\treturn module;\n}\nfunction webpackContextResolve(req) {\n\tvar id = map[req];\n\tif(!(id + 1)) { // check for number or string\n\t\tvar e = new Error('Cannot find module \"' + req + '\".');\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn id;\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/img sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack:///./src/img_sync_^\\.\\/.*$?");
 
 /***/ }),
 
@@ -321,6 +321,28 @@ eval("module.exports = __webpack_require__.p + \"img/about-photo.jpg?1ece63c679d
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"img/avocode.jpg?053fa70395316bc6f4e2cafcaefe7060\";\n\n//# sourceURL=webpack:///./src/img/avocode.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/contacts.jpg":
+/*!******************************!*\
+  !*** ./src/img/contacts.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/contacts.jpg?ff71893eb5f05d54a2bc0b729b2d7661\";\n\n//# sourceURL=webpack:///./src/img/contacts.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/github-icon.svg":
+/*!*********************************!*\
+  !*** ./src/img/github-icon.svg ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/github-icon.svg?76d344f08412543c74ccd1fb2493d607\";\n\n//# sourceURL=webpack:///./src/img/github-icon.svg?");
 
 /***/ }),
 
@@ -354,6 +376,39 @@ eval("module.exports = __webpack_require__.p + \"img/logo.svg?65f7a41be1ece9c109
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"img/logo.svg~?8659b8fddd8b0b4ba79ea83e5871a877\";\n\n//# sourceURL=webpack:///./src/img/logo.svg~?");
+
+/***/ }),
+
+/***/ "./src/img/mail-icon.svg":
+/*!*******************************!*\
+  !*** ./src/img/mail-icon.svg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/mail-icon.svg?ca821b1486c101ebb076760a1ce12704\";\n\n//# sourceURL=webpack:///./src/img/mail-icon.svg?");
+
+/***/ }),
+
+/***/ "./src/img/map-icon.svg":
+/*!******************************!*\
+  !*** ./src/img/map-icon.svg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/map-icon.svg?f466789c5dc8a81884a00f5ad85e30bb\";\n\n//# sourceURL=webpack:///./src/img/map-icon.svg?");
+
+/***/ }),
+
+/***/ "./src/img/phone-icon.svg":
+/*!********************************!*\
+  !*** ./src/img/phone-icon.svg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/phone-icon.svg?c9f4d7dbb18b5dd22331993ed32b4742\";\n\n//# sourceURL=webpack:///./src/img/phone-icon.svg?");
 
 /***/ }),
 
@@ -401,6 +456,28 @@ eval("module.exports = __webpack_require__.p + \"img/project-4.jpg?b27ae0c2d3bc3
 
 /***/ }),
 
+/***/ "./src/img/project-image.jpg":
+/*!***********************************!*\
+  !*** ./src/img/project-image.jpg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/project-image.jpg?d0ac5ca3a683caaaf09445517a37a299\";\n\n//# sourceURL=webpack:///./src/img/project-image.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/projects.jpg":
+/*!******************************!*\
+  !*** ./src/img/projects.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/projects.jpg?f94a5b14ead1532fbe8f036d1e68e273\";\n\n//# sourceURL=webpack:///./src/img/projects.jpg?");
+
+/***/ }),
+
 /***/ "./src/img/selector-icon.svg~":
 /*!************************************!*\
   !*** ./src/img/selector-icon.svg~ ***!
@@ -409,6 +486,17 @@ eval("module.exports = __webpack_require__.p + \"img/project-4.jpg?b27ae0c2d3bc3
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"img/selector-icon.svg~?d41d8cd98f00b204e9800998ecf8427e\";\n\n//# sourceURL=webpack:///./src/img/selector-icon.svg~?");
+
+/***/ }),
+
+/***/ "./src/img/skype-icon.svg":
+/*!********************************!*\
+  !*** ./src/img/skype-icon.svg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/skype-icon.svg?6fdb9fa4b4e27890ebda95d052096f31\";\n\n//# sourceURL=webpack:///./src/img/skype-icon.svg?");
 
 /***/ }),
 

@@ -21,7 +21,7 @@
     }
 }
 
-.home__content {
+.home__intro-content {
     position: relative;
     z-index: 2;
 }
@@ -29,6 +29,8 @@
 .home__intro-title {
     font-family: @font-alt;
     font-size: 70px;
+    font-style: italic;
+    font-weight: 600;
     color: @color-dark;
 }
 
@@ -173,18 +175,24 @@
     padding: 10px 30px;
     background-color: transparent;
     border: 2px solid @color-dark;
-    border-radius: 25px;
+    border-radius: 5px;
     color: @color-dark;
     font-size: 18px;
     transition: background-color 0.25s;
     position: relative;
     overflow: hidden;
     &:hover {
-        color: @color-dark;
+        color: #fff;
         text-decoration: none;
         &::before {
             width: 100%;
             transition: width 0.25s;
+        }
+        .home__studio-link-icon {
+            svg {
+                fill: #fff !important;
+                color: #fff !important;
+            }
         }
     }
     span {
@@ -198,7 +206,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: @color-alt;
+        background-color: @color-dark;
         transition: width 0.25s;
     }
 }
