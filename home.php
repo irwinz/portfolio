@@ -18,10 +18,10 @@
 				<h2 class="section-title section-title_dark">О себе</h2>
 				<div class="home__about-cols">
 					<div class="home__about-photo">
-						<img src="<?php the_field('home_about-photo'); ?>" alt="">
+						<img src="<?php the_field('home_about-photo') ?>" alt="">
 					</div>
 					<div class="home__about-text">
-						<?php the_field('home_about-text'); ?>
+						<?php the_field('home_about-text') ?>
 					</div>
 				</div>
 			</div>
@@ -135,7 +135,7 @@
 						<a class="uk-position-center-right-out" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
 					</div>
 				</div>
-				<a class="view-all" href="#"><span>Посмотреть все</span></a>
+				<a class="view-all" href="<?php echo get_page_link(4)?>"><span>Посмотреть все</span></a>
 			</div>
 		</section>
 		<section class="home__recent-news">
@@ -143,12 +143,9 @@
 				<h2 class="section-title">Свежие статьи</h2>
 				<div class="home__recent-news-grid">
 					<?php
-					$args = array(
-						'category' => 'Статьи',
-						'numberposts' => 2,
-					);
-					$news = get_posts($args);
-					foreach ($news as $post): ?>
+						$news = get_posts(array('category' => 'Статьи','numberposts' => 2));
+						foreach ($news as $post):
+					?>
 					<div>
 						<div class="news-item">
 							<div class="news-item__image uk-cover-container">
@@ -163,7 +160,7 @@
 										</a>
 									</div>
 									<div>
-										<time class="news-item__time" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y-m-d'); ?></time>
+										<time class="news-item__time" datetime="<?php the_time('d.m.Y'); ?>"><?php the_time('d.m.Y'); ?></time>
 									</div>
 								</header>
 								<div class="news-item__text">
@@ -173,9 +170,12 @@
 							</div>
 						</div>
 					</div>
-				<?php endforeach; wp_reset_postdata();?>
+				<?php
+					endforeach;
+					wp_reset_postdata();
+				?>
 				</div>
-				<a class="view-all" href="#"><span>Посмотреть все</span></a>
+				<a class="view-all" href="<?php echo get_page_link(10)?>"><span>Посмотреть все</span></a>
 			</div>
 		</section>
 		<section class="home__studio">

@@ -16,23 +16,23 @@
     				<div>
                         <div class="contacts__info-row">
                             <img class="contacts__icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/map-icon.svg">
-                            <span class="contacts__info">Россия, г. Воронеж</span>
+                            <span class="contacts__info"><?php the_field('contacts_address') ?></span>
                         </div>
                         <div class="contacts__info-row">
                             <img class="contacts__icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/mail-icon.svg">
-                            <span class="contacts__info">xxxxxxxxx@gmail.com</span>
+                            <span class="contacts__info"><?php the_field('contacts_email') ?></span>
                         </div>
                         <div class="contacts__info-row">
                             <img class="contacts__icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/phone-icon.svg">
-                            <span class="contacts__info">xxxx-xxxx-xxx-xxx</span>
+                            <span class="contacts__info"><?php the_field('contacts_tel') ?></span>
                         </div>
                         <div class="contacts__info-row">
                             <img class="contacts__icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/skype-icon.svg">
-                            <span class="contacts__info">xxxxxx</span>
+                            <span class="contacts__info"><?php the_field('contacts_skype') ?></span>
                         </div>
                         <div class="contacts__info-row">
                             <img class="contacts__icon" src="<?php echo get_template_directory_uri(); ?>/dist/img/github-icon.svg">
-                            <span class="contacts__info">xxxxxxx</span>
+                            <span class="contacts__info"><?php the_field('contacts_github') ?></span>
                         </div>
     				</div>
                     <div>

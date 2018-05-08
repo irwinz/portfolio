@@ -13,74 +13,42 @@
         <div class="articles__content">
             <div class="uk-container">
                 <div class="recent-news__pool">
+                    <?php
+                        $articles = new WP_Query(array('category' => 'Статьи', 'posts_per_page' => 2, 'paged' => get_query_var('paged')));
+                        if ($articles->have_posts()):
+                        while ($articles->have_posts()):
+                        $articles->the_post();
+                    ?>
                     <div class="news-item">
                         <div class="news-item__image uk-cover-container">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/uikit.jpg" alt="" data-uk-cover>
-                            <a class="news-item__image-link" href="#"></a>
+                            <img src="<?php the_field('article_image') ?>" alt="" data-uk-cover>
+                            <a class="news-item__image-link" href="<?php the_permalink() ?>"></a>
                         </div>
                         <div class="news-item__desc">
                             <header class="news-item__heading">
                                 <div>
-                                    <a class="news-item__title-link" href="#">
-                                        <h3 class="news-item__title">Заголовок статьи №1</h3>
+                                    <a class="news-item__title-link" href="<?php the_permalink() ?>">
+                                        <h3 class="news-item__title"><?php the_title() ?></h3>
                                     </a>
                                 </div>
                                 <div>
-                                    <time class="news-item__time" datetime="2018-09-23">2018-09-23</time>
+                                    <time class="news-item__time" datetime="<?php the_time('d.m.Y') ?>"><?php the_time('d.m.Y') ?></time>
                                 </div>
                             </header>
                             <div class="news-item__text">
-                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для...
+                                <?php the_field('article_intro') ?>
                             </div>
-                            <a class="link-more" href="#">Читать</a>
+                            <a class="link-more" href="<?php the_permalink() ?>">Читать</a>
                         </div>
                     </div>
-                    <div class="news-item">
-                        <div class="news-item__image uk-cover-container">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/avocode.jpg" alt="" data-uk-cover>
-                            <a class="news-item__image-link" href="#"></a>
-                        </div>
-                        <div class="news-item__desc">
-                            <header class="news-item__heading">
-                                <div>
-                                    <a class="news-item__title-link" href="#">
-                                        <h3 class="news-item__title">Заголовок статьи №2</h3>
-                                    </a>
-                                </div>
-                                <div>
-                                    <time class="news-item__time" datetime="2018-09-23">2018-09-23</time>
-                                </div>
-                            </header>
-                            <div class="news-item__text">
-                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для...
-                            </div>
-                            <a class="link-more" href="#">Читать</a>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-item__image uk-cover-container">
-                            <img src="<?php echo get_template_directory_uri(); ?>/dist/img/uikit.jpg" alt="" data-uk-cover>
-                            <a class="news-item__image-link" href="#"></a>
-                        </div>
-                        <div class="news-item__desc">
-                            <header class="news-item__heading">
-                                <div>
-                                    <a class="news-item__title-link" href="#">
-                                        <h3 class="news-item__title">Заголовок статьи №3</h3>
-                                    </a>
-                                </div>
-                                <div>
-                                    <time class="news-item__time" datetime="2018-09-23">2018-09-23</time>
-                                </div>
-                            </header>
-                            <div class="news-item__text">
-                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для...
-                            </div>
-                            <a class="link-more" href="#">Читать</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="recent-news__pagination">
+                    <?php
+                        endwhile;
+                        echo paginate_links(array('total' => $articles->max_num_pages));
+                        endif;
+                    ?>
+
+
+                <!-- <div class="recent-news__pagination">
                     <ul class="uk-pagination uk-flex-center" uk-margin>
                         <li><a href="#"><span uk-pagination-previous></span></a></li>
                         <li><a href="#">1</a></li>
@@ -96,7 +64,7 @@
                         <li><a href="#">20</a></li>
                         <li><a href="#"><span uk-pagination-next></span></a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>
