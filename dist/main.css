@@ -12997,3 +12997,48 @@ iframe.uk-cover {
 .article__image {
   margin-bottom: 40px;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: #333;
+}
+.pagination__page {
+  margin: 0 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.pagination__page:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.pagination__current {
+  margin: 0 10px;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #fff;
+  cursor: default;
+}
+.pagination__prev {
+  margin-right: 5px;
+  font-size: 30px;
+}
+.pagination__prev:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.pagination__next {
+  margin-left: 5px;
+  font-size: 30px;
+}
+.pagination__next:hover {
+  color: inherit;
+  text-decoration: none;
+}

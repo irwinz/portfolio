@@ -1,4 +1,4 @@
-<?php /* Template Name: Проекты */ ?>
+<?php /* Template Name: Статьи */ ?>
 <!DOCTYPE html>
 <html>
 <?php get_header(); ?>
@@ -14,10 +14,16 @@
             <div class="uk-container">
                 <div class="recent-news__pool">
                     <?php
-                        $articles = new WP_Query(array('category' => 'Статьи', 'posts_per_page' => 2, 'paged' => get_query_var('paged')));
-                        if ($articles->have_posts()):
-                        while ($articles->have_posts()):
-                        $articles->the_post();
+                        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                        $wp_query = new WP_Query(array(
+                        	'category-name' => 'Статьи',
+                        	'paged' => $paged,
+                        	'post_status' => 'publish',
+                        	'posts_per_page' => 2,
+                        	'caller_get_posts'=> 1)
+                        );
+                        while ($wp_query->have_posts()):
+                            $wp_query->the_post();
                     ?>
                     <div class="news-item">
                         <div class="news-item__image uk-cover-container">
@@ -41,30 +47,9 @@
                             <a class="link-more" href="<?php the_permalink() ?>">Читать</a>
                         </div>
                     </div>
-                    <?php
-                        endwhile;
-                        echo paginate_links(array('total' => $articles->max_num_pages));
-                        endif;
-                    ?>
-
-
-                <!-- <div class="recent-news__pagination">
-                    <ul class="uk-pagination uk-flex-center" uk-margin>
-                        <li><a href="#"><span uk-pagination-previous></span></a></li>
-                        <li><a href="#">1</a></li>
-                        <li class="uk-disabled"><span>...</span></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li class="uk-active"><span>7</span></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li class="uk-disabled"><span>...</span></li>
-                        <li><a href="#">20</a></li>
-                        <li><a href="#"><span uk-pagination-next></span></a></li>
-                    </ul>
-                </div> -->
+                    <?php endwhile; ?>
+                </div>
+                <?php if ( function_exists('wp_pagenavi')) wp_pagenavi(array('wrapper_class' => 'pagination')); ?>
             </div>
         </div>
     </main>

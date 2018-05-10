@@ -15,27 +15,76 @@ if(function_exists('register_nav_menus')){
 	);
 }
 
-function add_specific_menu_location_atts( $atts, $item, $args ) {
-    // check if the item is in the primary menu
-    if( $args->theme_location == 'primary' ) {
-      // add the desired attributes:
-      $atts['class'] = 'decor-link';
-    }
-    return $atts;
-}
-add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
+// Пагинация
+add_filter('wp_pagenavi_class_pages', 'theme_pagination_pages_class');
+add_filter('wp_pagenavi_class_page', 'theme_pagination_page_class');
+add_filter('wp_pagenavi_class_current', 'theme_pagination_page_current');
+add_filter('wp_pagenavi_class_first', 'theme_pagination_page_first');
+add_filter('wp_pagenavi_class_last', 'theme_pagination_page_last');
+add_filter('wp_pagenavi_class_previouspostslink', 'theme_pagination_page_prev');
+add_filter('wp_pagenavi_class_nextpostslink', 'theme_pagination_page_next');
 
-//Навигация
-add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
-function my_navigation_template( $template, $class ){
-	/*
-	Вид базового шаблона:
-	<nav class="navigation %1$s" role="navigation">
-		<h2 class="screen-reader-text">%2$s</h2>
-		<div class="nav-links">%3$s</div>
-	</nav>
-	*/
-
-	return '<div class="recent-news__pagination navigation" role="navigation">%3$s</div>';
+function theme_pagination_pages_class($class_name) {
+     return 'pagination__item';
 }
-?>
+
+function theme_pagination_page_class($class_name) {
+    return 'pagination__item pagination__page';
+}
+
+function theme_pagination_page_current($class_name) {
+    return 'pagination__item pagination__current';
+}
+
+function theme_pagination_page_prev($class_name) {
+    return 'pagination__item pagination__prev';
+}
+
+function theme_pagination_page_next($class_name) {
+    return 'pagination__item pagination__next';
+}
+
+function theme_pagination_page_first($class_name) {
+    return 'pagination__item pagination__first';
+}
+
+function theme_pagination_page_last($class_name) {
+    return 'pagination__item pagination__last';
+}
+
+//Создать
+add_action('init', 'create_post_type');
+function create_post_type()
+{
+    register_post_type('projects',
+        array(
+        'labels' => array(
+            'name' => 'Проекты',
+            'all_items' => 'Все проекты',
+            'singular_name' => 'Проект',
+            'add_new' => 'Добавить',
+            'add_new_item' => 'Добавить проект',
+            'edit' => 'Редактировать',
+            'edit_item' => 'Редактировать проект',
+            'new_item' => 'Новый проект',
+            'view' => 'Смотреть',
+            'view_item' => 'Смотреть проект',
+            'search_items' => 'Искать проект',
+            'not_found' => 'Проект не найден',
+            'not_found_in_trash' => 'Нет проекта в корзине'
+        ),
+		'show_in_rest' => true,
+        'public' => true,
+        'hierarchical' => false,
+        'has_archive' => false,
+    	'menu_position' => 5,
+    	'menu_icon' => 'dashicons-welcome-widgets-menus',
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        ),
+        'can_export' => true,
+        'taxonomies' => array()
+    ));
+}

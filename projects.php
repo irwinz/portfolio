@@ -19,134 +19,28 @@
                     <button class="projects__filter-item" type="button">Кейсы</button>
                 </div>
                 <div class="projects__grid">
+                    <?php
+                    $projects = get_posts(array('post_type' => 'projects'));
+                    foreach ($projects as $key => $post): ?>
                     <div>
                         <div class="project-item">
                             <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
+                                <img src="" alt="" data-uk-cover>
                             </div>
                             <div class="project-item__desc">
                                 <div class="project-item__title">
-                                    Проект №4
+                                    <?php the_title(); ?>
                                 </div>
                                 <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
+                                    <?php the_content(); ?>
                                 </div>
                                 <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="project-item">
-                            <div class="project-item__image uk-cover-container">
-                                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/project-1.jpg" alt="" data-uk-cover>
-                            </div>
-                            <div class="project-item__desc">
-                                <div class="project-item__title">
-                                    Проект №4
-                                </div>
-                                <div class="project-item__text">
-                                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
-                                </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        endforeach;
+                    ?>
                 </div>
                 <button class="view-all" type="button"><span>Показать ещё</span></button>
             </div>
