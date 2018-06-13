@@ -12,14 +12,15 @@
             moreRequest.open('GET', projectsPath + morePageNumber);
             moreRequest.send();
             morePageNumber++;
-            moreRequest.addEventListener('readystatechange', function(moreRequest) {
+            moreRequest.addEventListener('readystatechange', function() {
                 requestHandler(moreRequest);
-            })
+                let pageCount = checkPageCount(moreRequest);
+            });
+            
         }
 
         function requestHandler(request) {
             if (request.readyState == 4)  {
-                console.log('ura!')
                 let projectsArr = JSON.parse(request.responseText);
                 projectsArr.forEach(element => {
                     let projectTitle = element.title.rendered;
@@ -27,7 +28,14 @@
                     let projectImg = element.acf.project_gallery[0].url;
                     let projectID = element.id;
                     renderProjectItem(projectTitle, projectDesc, projectImg, projectID);
-                });
+                }); 
+            }
+        }
+
+        function checkPageCount(request) {
+            if (request.readyState == 4)  {
+                let pageCount = request.getResponseHeader('X-WP-TotalPages');
+                return pageCount;
             }
         }
 
