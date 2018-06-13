@@ -19,27 +19,34 @@
                     <button class="projects__filter-item" type="button">Кейсы</button>
                 </div>
                 <div class="projects__grid">
-                    <?php
-                    $projects = get_posts(array('post_type' => 'projects'));
-                    foreach ($projects as $key => $post): ?>
+                    <?php 
+                        $projects = get_posts(array(
+                            'numberposts' => 4,
+                            'post_type' => 'projects'
+                            )
+                        );
+                        foreach ($projects as $key => $post): 
+                    ?>
                     <div>
                         <div class="project-item">
                             <div class="project-item__image uk-cover-container">
-                                <img src="" alt="" data-uk-cover>
+                                <?php $image = get_field('project_gallery', $post->id)[0]; ?>	
+                                <img src="<?php echo $image['url'] ?>" alt="" data-uk-cover>
                             </div>
-                            <div class="project-item__desc">
+                            <div class ="project-item__desc">
                                 <div class="project-item__title">
                                     <?php the_title(); ?>
                                 </div>
                                 <div class="project-item__text">
                                     <?php the_content(); ?>
                                 </div>
-                                <button class="link-more" uk-toggle="target: #project" type="button">Подробнее</button>
+                                <button class="link-more js-modal-project" uk-toggle="target: #project" type="button" data-id="<?php echo the_id(); ?>">Подробнее</button>
                             </div>
                         </div>
                     </div>
-                    <?php
-                        endforeach;
+                    <?php 
+                        endforeach; 
+                        wp_reset_postdata();
                     ?>
                 </div>
                 <button class="view-all" type="button"><span>Показать ещё</span></button>
@@ -68,9 +75,8 @@
                     </div>
                     <div>
                         <div class="project-modal__caption">
-                            <h2 class="project-modal__title">Проект №1</h2>
+                            <h2 class="project-modal__title"></h2>
                             <div class="project-modal__desc">
-                                Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне...
                             </div>
                             <a class="link-out" href="#"><span>Перейти<span class="link-out__icon uk-preserve" uk-icon="icon: arrow-right"></span></span></a>
                         </div>

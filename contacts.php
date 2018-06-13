@@ -41,16 +41,16 @@
                                 Вы также можете связаться со мной, используя форму.
                             </div>
                             <div class="contacts-form__row">
-                                <input class="contacts-form__input uk-input" name="contacts_name" type="text" placeholder="Ваше имя">
+                                <input class="contacts-form__input uk-input" name="user" type="text" placeholder="Ваше имя">
                             </div>
                             <div class="contacts-form__row">
-                                <input class="contacts-form__input uk-input" name="contacts_tel" type="tel" placeholder="Телефон">
+                                <input class="contacts-form__input uk-input" name="phone" type="tel" placeholder="Телефон">
+                            </div> 
+                            <div class="contacts-form__row">
+                                <input class="contacts-form__input uk-input" name="email" type="email" placeholder="Email*" required>
                             </div>
                             <div class="contacts-form__row">
-                                <input class="contacts-form__input uk-input" name="contacts_email" type="email" placeholder="Email*" required>
-                            </div>
-                            <div class="contacts-form__row">
-                                <textarea class="contacts-form__textarea uk-textarea" name="contacts_message" placeholder="Сообщение*" required></textarea>
+                                <textarea class="contacts-form__textarea uk-textarea" name="message" placeholder="Сообщение*" required></textarea>
                             </div>
                             <div class="contacts-form__row">
                                 <div class="contacts-form__tip">
@@ -60,7 +60,7 @@
                             <div class="contacts-form__row">
                                 <button class="contacts-form__submit" type="submit" name="contacts_submit">Отправить</button>
                             </div>
-                        </form>
+                        </form> 
                     </div>
         		</div>
             </div>
